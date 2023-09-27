@@ -41,6 +41,23 @@ class Solution {
     }
 }
 
+//Soluton 2
+class Solution2 {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        
+        for i in 0..<nums.count {
+            for j in (i+1)..<nums.count {
+                if nums[i] + nums[j] == target {
+                    return [i, j]
+                }
+            }
+        }
+
+        return []
+    }
+}
+
+
 
 // example
 let nums = [1,2,3,4,5,6,7,8]
