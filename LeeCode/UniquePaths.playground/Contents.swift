@@ -7,6 +7,8 @@
  The test cases are generated so that the answer will be less than or equal to 2 * 109.
  */
 
+//space complexity of O(m * n)
+//time complexity of O(m * n)
 
 class Solution {
     func uniquePaths(_ m: Int, _ n: Int) -> Int {
