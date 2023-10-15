@@ -42,6 +42,7 @@ class Solution {
 }
 
 //Soluton 2
+
 class Solution2 {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         
