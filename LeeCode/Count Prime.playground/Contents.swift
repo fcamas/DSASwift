@@ -1,9 +1,10 @@
 
 /*
  Count Primes
-
  Given an integer n, return the number of prime numbers that are strictly less than n.
  */
+//Space Complexity O(n)
+//Time Complexity O(n * log(log(n)))
 class Solution {
     func countPrimes(_ n: Int) -> Int {
 
