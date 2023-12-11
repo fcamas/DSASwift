@@ -35,3 +35,24 @@ class Solution {
         return maxProfit
     }
 }
+
+//Time Complexity O(n)
+//Space Complexity 0(1)
+//Soluotn2 using min and max
+
+class Solution2 {
+    func maxProfit(_ prices: [Int]) -> Int {
+        var minPrice = Int.max
+        var maxProfit = 0
+
+        for price in prices {
+            // Update the minimum buying price
+            minPrice = min(minPrice, price)
+            
+            // Update the maximum profit if selling at the current price
+            maxProfit = max(maxProfit, price - minPrice)
+        }
+
+        return maxProfit
+    }
+}
