@@ -8,6 +8,10 @@
  */
 
 
+//Time complexity: O(n) - Linear, where n is the number of nodes in the linked list.
+//Space complexity: O(1) - Constant, as only two pointers are used regardless of list size.
+
+
 import Foundation
 
 class ListNode {
@@ -20,18 +24,22 @@ class ListNode {
     }
 }
 
-func hasCycle(_ head: ListNode?) -> Bool {
-    var slow = head
-    var fast = head
 
-    while fast != nil && fast?.next != nil {
-        slow = slow?.next
-        fast = fast?.next?.next
+class Solution {
+    func hasCycle(_ head: ListNode?) -> Bool {
+        var slow = head
+        var fast = head
 
-        if slow === fast {
-            return true // Cycle detected
+        while fast != nil && fast?.next != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+
+            if slow === fast {
+                return true // Cycle detected
+            }
         }
-    }
 
-    return false // No cycle found
+        return false // No cycle found
+    }
 }
+
