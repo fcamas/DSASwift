@@ -10,31 +10,7 @@
  
  */
 
-//Time Complexity O(n)
-//Space Complexity 0(1)
 
-class Solution {
-    func maxProfit(_ prices: [Int]) -> Int {
-        
-        var buyOpportunity = prices[0]
-        var maxProfit = 0
-
-        for i in 1..<prices.count {
-
-            if buyOpportunity > prices[i]{
-                buyOpportunity = prices[i]
-            }else {
-                let dayProfit = prices[i] - buyOpportunity
-
-                if maxProfit < dayProfit {
-                    maxProfit = dayProfit
-                }
-            }
-        }
-
-        return maxProfit
-    }
-}
 
 //Time Complexity O(n)
 //Space Complexity 0(1)
