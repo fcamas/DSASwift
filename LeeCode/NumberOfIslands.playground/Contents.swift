@@ -7,6 +7,8 @@ import UIKit
  
  */
 
+//Time Complexity: O(m * n), where m is the number of rows and n is the number of columns.
+//Space Complexity: O(m * n), where m is the number of rows and n is the number of columns.
 
 func numIslands(_ grid: [[Character]]) -> Int {
     guard !grid.isEmpty else { return 0 }
