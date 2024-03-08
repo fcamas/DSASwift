@@ -8,7 +8,8 @@
  */
 import Foundation
 
-
+//Time complexity: O(n^2)
+//Space complexity: O(n^2)
 let workerTasks1 = [
     ["Worker1", "TaskA"],
     ["Worker2", "TaskB"],
