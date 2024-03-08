@@ -14,6 +14,9 @@ class Node {
     public List<Node> neighbors;
 }
 */
+
+//Time complexity: O(V + E) - V represents the number of vertices (nodes) and E represents the number of edges in the graph.
+//Space complexity: O(V) - Space used by the visited dictionary and recursion stack.
 class Node {
     var val: Int
     var neighbors: [Node]
