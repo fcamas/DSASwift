@@ -13,22 +13,27 @@
 
 class Solution {
     func sortColors(_ nums: inout [Int]) {
-        var low = 0
-        var high = nums.count - 1
-        var current = 0
+        var low = 0  // Pointer for the starting index of 0s
+        var high = nums.count - 1  // Pointer for the ending index of 2s
+        var current = 0  // Current index
         
+        // Loop until the current index crosses the high index
         while current <= high {
             if nums[current] == 0 {
+                // If current element is 0, swap it with the element at low index
                 nums.swapAt(current, low)
-                low += 1
-                current += 1
+                low += 1  // Move the low pointer to the right
+                current += 1  // Move the current pointer to the right
             } else if nums[current] == 2 {
+                // If current element is 2, swap it with the element at high index
                 nums.swapAt(current, high)
-                high -= 1
+                high -= 1  // Move the high pointer to the left
+                // Note that we don't increment the current pointer here because
+                // after swapping, we need to re-examine the current element
             } else {
+                // If current element is 1, just move to the next element
                 current += 1
             }
         }
     }
-    
 }
